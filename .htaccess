@@ -1,5 +1,7 @@
 RewriteEngine On
 
+RewriteRule ^pay/?$ https://auth.robokassa.ru/merchant/Invoice/SGkGoRO6L0yfSLSI1OlVBQ [L,R=301]
+
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
